@@ -9,7 +9,7 @@ $(document).ready((function() {
     // (world-110m-withlakes.json) so we can render lakes.
     globe.loadPlugin(planetaryjs.plugins.earth({
         topojson: {
-          file: 'http://localhost:8000/planet.json'
+          file: 'http://mtrom.github.io/pirc/assets/planet.json'
         },
         oceans: {
             fill: '#021644'
