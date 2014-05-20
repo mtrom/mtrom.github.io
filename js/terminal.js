@@ -1,4 +1,4 @@
-var site = "file:///Users/Max/dev/mtrom.github.io/";
+var site = "mtrom.github.io/";
 
 var portfolio = { name: "portfolio",
 				  parent: null,
