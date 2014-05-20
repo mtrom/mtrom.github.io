@@ -1,4 +1,4 @@
-var site = "mtrom.github.io/";
+var site = "http://mtrom.github.io/";
 
 var portfolio = { name: "portfolio",
 				  parent: null,
@@ -43,10 +43,10 @@ $(document).ready(function() {
 
 	var font_size = (parseInt(terminal.css('font-size')) + 2) | 0;
 	max_lines = (parseInt($('#terminal').css('height')) / font_size) - (2 * parseInt($('pre').css('padding-top')) / font_size) | 0;
-	console.log("font size: " + font_size);
-	console.log("height: " + parseInt($('#terminal').css('height')));
-	console.log("padding: " + parseInt($('pre').css('padding-top')));
-	console.log("max lines:" + max_lines);
+	// console.log("font size: " + font_size);
+	// console.log("height: " + parseInt($('#terminal').css('height')));
+	// console.log("padding: " + parseInt($('pre').css('padding-top')));
+	// console.log("max lines:" + max_lines);
 
 	// Prevent the backspace key from navigating back.
 	$(document).unbind('keydown').bind('keydown', function (event) {
