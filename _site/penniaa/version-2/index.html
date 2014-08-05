@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		
+<meta charset="utf-8">
+<title>Penn IAA | Version 2</title>
+<link rel="shortcut icon" href="mtrom.github.io/penniaa/assets/iaa.ico">
+
+<!-- Bootstrap -->
+<link href="mtrom.github.io/penniaa/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Paper -->
+<link href="mtrom.github.io/penniaa/css/paper.css" rel="stylesheet">
+
+<!-- Header -->
+<!-- <link href="mtrom.github.io/penniaa/css/header.css" rel="stylesheet"> -->
+
+<!-- Page Specific Style -->
+<!-- <link href="mtrom.github.io/penniaa/css/" rel="stylesheet"> -->
+
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,200|Cinzel' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+		<style>
+		html, body {
+			height: 100%;
+			width: 100%;
+		}
+		.container-fluid {
+			padding: 0;
+		}
+		.banner {
+			width: 100%;
+			/*height: 600px;*/
+			/*background-image: url("mtrom.github.io/penniaa/assets/banner-backgrounds/ilmunc_newbanner.jpg");*/
+			background-position: 0 0;
+		}
+		.logo, .iaa {
+			position: absolute;
+			width: 200px;
+			padding: 0;
+			margin: 0;
+		}
+		.banner img.background {
+			position: relative;
+			height: 100%;
+		}
+		.huge {
+			height: 1000px;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-fluid"> 
+			<div class="banner">
+				<img src="mtrom.github.io/penniaa/assets/skyline.jpg" class="background"> <!-- banner-backgrounds/ilmunc_newbanner.jpg" class="background"> -->
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/Acad Affairs.png" class="logo"></a>
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/COE.png" class="logo"></a>
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/ILMUNC_fixed.png" class="logo"></a>
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/SPEV.png" class="logo"></a>
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/SecretaryBoard.png" class="logo"></a>
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/UPMUNC.png" class="logo"></a>
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/consul.png" class="logo"></a>
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/ilmunc china.png" class="logo"></a>
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/ilmunc india.png" class="logo"></a>
+				<a href="#"><img src="mtrom.github.io/penniaa/assets/branch-logos/intercol.png" class="logo"></a>
+				<img src="mtrom.github.io/penniaa/assets/Branch Vector Files/Individual branch logos/IAA Club Logo white.png" class="iaa">
+			</div>
+			<div class="row huge">
+			</div>
+		</div>
+ 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="mtrom.github.io/penniaa/js/transit.min.js"></script>
+		<script src="mtrom.github.io/penniaa/js/shadow-animation.min.js"></script>
+		<script src="mtrom.github.io/penniaa/js/paper.js"></script>
+		<script>
+		$(document).ready(function() {
+
+			$('.background').height($(window).height());
+			$('.background').width($(window).width());
+
+			var i = 0;
+			var radius = 300;
+			var centerx = $('.banner').innerWidth() / 2;
+			var centery = $('.banner').innerHeight() / 2;
+			$('.logo').each(function() {
+				var x = (radius * Math.cos(i)) + centerx - ($(this).width() / 2);
+				var y = (radius * Math.sin(i)) + centery - ($(this).height() / 2);
+				i += Math.PI / 5;
+				$(this).css({ top: y, left: x });
+			});
+
+			$('.iaa').each(function() {
+				var x = centerx - ($(this).width() / 2);
+				var y = centery - ($(this).height() / 2);
+				$(this).css({ top: y, left: x });
+			});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		});
+		</script>
+	</body>
+</html>
