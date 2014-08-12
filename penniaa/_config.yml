@@ -1,4 +1,7 @@
 ---
-url: mtrom.github.io/penniaa
+url: file:///Users/Max/dev/penniaa/_site
+# sass:
+sass_dir: _sass
+style: :compressed
 ---
 

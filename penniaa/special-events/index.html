@@ -1,0 +1,47 @@
+---
+title: Special Events
+background: spev_background.jpg
+logo: spev.png
+---
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		{% include head.html %}
+	</head>
+
+	<body>
+		<div class="loading"></div>
+		<div class="container-fluid" id="page">
+
+			{% include header.html %}
+
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<h1 id="about">About the Special Events Board</h1>
+					<p> The IAA hosts a variety of different social, community service, academic, and international events. Between our conferences and intercollegiate trips, the Special Events board works diligently to keep the club active and fun for its members. The purpose of Special Events is to foster a sense of community within the organization and for members to pursue opportunities related to international affairs outside of Model UN conferences. In the past, Special Events has hosted weekend community service, various speaker events, paint balling, a trip to the Poconos, a Spring Formal, Mafia Nights, and countless other events. All members are encouraged to participate in Special Events as a way to meet others in the club, to learn new things, and to have a great time. </p>
+
+					<div class="break"></div>
+
+					<h1 id="calender">Calender</h1>
+
+					<div class="break"></div>					
+
+					{% include footer.html %}
+
+				</div> <!-- col-md-6 -->
+				<div class="col-md-3">
+					<div class="sidebar">
+						<ul>
+							<li anchor="about"> About SPEV </li>
+							<li anchor="calender"> Calender </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% include js.html %}
+	</body>
+</html>

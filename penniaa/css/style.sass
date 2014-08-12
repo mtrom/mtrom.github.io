@@ -1,0 +1,63 @@
+---
+---
+
+@import colors
+@import fonts
+
+html, body
+	height: 100%
+	width: 100%
+	font-family: "Roboto"
+	background-color: $un-white
+
+#page
+	width: 100%
+	margin: 0
+	padding: 0
+
+.row
+	padding-top: 50px
+
+	.break
+		width: 105%
+		position: relative
+		margin: 50px 0
+		border-bottom: 1px solid black
+
+	h1
+		font-size: 50px
+		font-family: $futura
+		text-align: center
+
+		padding-bottom: 20px
+		margin-bottom: 20px
+
+	p
+		font-size: 16px
+		font-family: $roboto
+		text-align: justify
+		line-height: 1.5
+
+.portrait > div
+	position: relative
+	width: 100%
+	overflow: hidden
+
+	img
+		width: 100%
+
+.bio > p
+	text-indent: 30px
+
+#huge
+	height: 1000px
+	background-color: $un-white
+
+#mid
+	width: 0
+	height: 1000px
+	position: fixed
+	left: 50%
+	top: 0
+	border: 1px solid red
+	z-index: 100000

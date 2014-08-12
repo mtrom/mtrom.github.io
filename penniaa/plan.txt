@@ -1,0 +1,49 @@
+Banners:
+	CONSUL
+	ILMUNC
+	UPMUNC
+
+
+Tabs:
+	Splash -- ??
+		Get Involved (lots of contact stuff)
+		Contact Us
+		(Alumni Listserv)
+		Exec (board)
+	Conferences -- ??
+		UPMUNC (about)
+		ILMUNC (about)
+		ILMUNC (china)
+		ILMUNC (india)
+	Intercol - INTERCOL
+		Intercol (about)
+		Member Area (intercol) <- no clue what thats about
+		Conference Schedule
+		Awards
+		Intercol (board)
+	Publications -- ??
+		Consul (about)
+		Consul (board)
+		Ambassador (about)
+		Archives (ambassador/consul/other?)
+
+		
+	Academic Affairs -- AA
+		AA (about)
+		AA (board)
+	COE -- COE
+		COE (about)
+		PIRC (about)
+		COE (board)
+	Special Events -- SPEV
+		SPEV
+		Calender
+	Secretary Board -- SECRETARY BOARD
+		Secretariate (board)
+		Secretariate (about)
+
+
+
+
+
+
