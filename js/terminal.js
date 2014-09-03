@@ -35,7 +35,7 @@ var root = {
 portfolio.parent = root;
 contact.parent   = root;
 
-var code = "\bhelp";
+var code = "\bhelp\nQUIPU- bash, version 1.0.0\nThe following commands are supported:\n\tcd [dir]\tchange the current directory to 'dir'\n\topen [file]\topens the 'file' (or website) to a new tab\n\tls [dir]\tlists subdirectories and files of 'dir'\n\tclear\t\tclears display\n\thelp\t\tgives these instructions\n\nwhen in doubt, just try opening it\nalso there's autocomplete :)\n\ntype 'open resume.pdf' to see my resume\n\b";
 var dir = root;
 var tag = "mtrom.github.io:" + dir.name + " Max$ ";
 var i = 1;
@@ -78,7 +78,6 @@ $(document).ready(function() {
 
 
 	$('#terminal').keydown(function(event) {
-		console.log('DING');
 		// up arrow
 		if (event.which == 38) {
 			var curr = terminal.html();
@@ -115,19 +114,48 @@ $(document).ready(function() {
 	 		var arr = curr.substr(curr.lastIndexOf('\n') + tag.length + 1).split(' ');
 	 		var word = arr[arr.length - 1];
 
+	 		if (word.length === 0 || word === '0') return;
+
+	 		// greatest common shared word
+	 		var gcd = '';
+
 	 		for (var j = 0; j < dir.children.length; j++) {
 	 		 	 if (dir.children[j].name.search(word) === 0) {
-	 		 	 	curr = curr.substring(0, curr.length - word.length) + dir.children[j].name;
-	 		 	 	terminal.html(curr);
+	 		 	 	if (gcd === '') {
+		 		 	 	gcd = dir.children[j].name;
+	 		 	 	} else {
+	 		 	 		var out = '';
+	 		 	 		for (var k = 0; k < Math.max(gcd.length, dir.children[j].name.length); k++) {
+	 		 	 			if (gcd.charAt(k) === dir.children[j].name.charAt(k))
+	 		 	 				out = out + gcd.charAt(k);
+	 		 	 			else break;
+	 		 	 		}
+	 		 	 		gcd = out;
+	 		 	 	}
 	 		 	 }
 	 		}
 
 	 		for (var j = 0; j < dir.files.length; j++) {
 	 		 	 if (dir.files[j].name.search(word) === 0) {
-	 		 	 	curr = curr.substring(0, curr.length - word.length) + dir.files[j].name;
-	 		 	 	terminal.html(curr);
+	 		 	 	if (gcd === '') {
+		 		 	 	gcd = dir.files[j].name;
+	 		 	 	} else {
+	 		 	 		var out = '';
+	 		 	 		for (var k = 0; k < Math.max(gcd.length, dir.files[j].name.length); k++) {
+	 		 	 			if (gcd.charAt(k) === dir.files[j].name.charAt(k))
+	 		 	 				out = out + gcd.charAt(k);
+	 		 	 			else {
+	 		 	 				break;
+	 		 	 			}
+	 		 	 		}
+	 		 	 		gcd = out;
+	 		 	 	}
 	 		 	 }
 	 		}
+	 		if (gcd !== '') {
+		 		curr = curr.substring(0, curr.length - word.length) + gcd;
+		 		terminal.html(curr);
+		 	}
 	 	}
 	});
 
