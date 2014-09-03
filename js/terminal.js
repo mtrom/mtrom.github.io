@@ -6,12 +6,21 @@ var portfolio = { name: "portfolio",
 				  files: [{
 				  	name: "pennirc.org",
 				  	path: "http://www.pennirc.org"
+				  }, {
+				  	name: "penniaa.com",
+				  	path: "http://www.penniaa.com"
 				  }]
 			    };
 var contact = { name: "contact",
 				parent: null,
 				children: [],
-				files: []
+				files: [{
+					name: "e-mail",
+					path: "mailto:mtromanhauser@gmail.com"
+				}, {
+					name: "github",
+					path: "https://github.com/mtrom/"
+				}]
 			  };
 var root = {
 	name: "~",
@@ -35,7 +44,7 @@ var max_lines = 40;
 var cmd_stack = [];
 var cmd_stack_pointer = 0;
 
-var help = "QUIPU- bash, version 1.0.0\nThe following commands are supported:\n\tcd [dir]\tchange the current directory to 'dir'\n\topen [file]\topens the file to a new tab\n\tls [dir]\tlists subdirectories and files of 'dir'\n\tclear\t\tclears display\n\thelp\t\tgives these instructions\n\nwhen in doubt, just try opening it\nalso there's autocomplete :)\n\ntype 'open resume.pdf' to see my resume";
+var help = "QUIPU- bash, version 1.0.0\nThe following commands are supported:\n\tcd [dir]\tchange the current directory to 'dir'\n\topen [file]\topens the 'file' (or website) to a new tab\n\tls [dir]\tlists subdirectories and files of 'dir'\n\tclear\t\tclears display\n\thelp\t\tgives these instructions\n\nwhen in doubt, just try opening it\nalso there's autocomplete :)\n\ntype 'open resume.pdf' to see my resume";
 
 $(document).ready(function() {
 	terminal = $('code');
