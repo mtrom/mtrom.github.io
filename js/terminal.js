@@ -49,6 +49,7 @@ var help = "QUIPU- bash, version 1.0.0\nThe following commands are supported:\n\
 $(document).ready(function() {
 	terminal = $('code');
 	typing();
+	$('#terminal').focus();
 
 	var font_size = (parseInt(terminal.css('font-size')) + 2) | 0;
 	max_lines = (parseInt($('#terminal').css('height')) / font_size) - (2 * parseInt($('pre').css('padding-top')) / font_size) | 0;
