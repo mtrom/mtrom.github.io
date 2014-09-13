@@ -3,16 +3,23 @@ var venmoAPI = 'https://api.venmo.com/v1/';
 // var access_token = 'PgcpC5AjX8ZBnrNWHzAJftXmv69dMf4D';
 var access_token;
 
+angular.element(document).ready(function() {
+	access_token = getParameterByName('access_token');
+
+	if (access_token === "") {
+		$('#getDataButton').hide();
+	}
+});
+
 venmore.controller('venmoreController', function ($scope, $http) {
 	$scope.json = "Angular Testing";
 
 	$scope.getData = function() {
-		try {
-			console.log(getParameterByName(access_token));
-		} catch (err) {
-			
-		}
-	} 
+		$http.get(venmoAPI + 'payments?access_token=' + access_token).success(function (data, status, headers, config) {
+			json = data;
+		});
+	};
+
 });
 
 function getParameterByName(name) {
