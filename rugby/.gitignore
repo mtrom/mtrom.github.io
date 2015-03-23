@@ -1,0 +1,6 @@
+fonts
+libs
+node_modules
+assets
+*.swp
+*.un~
