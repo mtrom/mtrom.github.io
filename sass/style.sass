@@ -1,0 +1,212 @@
+$primary: #218693
+$accent: #D0B03C
+$primary-light: #96D9F1
+$background: #333333
+$background-light: #8F8F8F 
+$dark: #333333
+$light: white
+
+
+@font-face
+    src: url('../fonts/Raleway-Regular.ttf') format('truetype')
+    font-family: 'Raleway'
+
+@font-face
+    src: url('../fonts/Raleway-Bold.ttf') format('truetype')
+    font-family: 'Raleway'
+    font-weight: bold
+
+
+@font-face
+    src: url('../fonts/Raleway-Light.ttf') format('truetype')
+    font-family: 'Raleway'
+    font-weight: 200
+
+@font-face
+    src: url('../fonts/Merriweather-Light.ttf') format('truetype')
+    font-family: 'Merriweather'
+
+@font-face
+    src: url('../fonts/Merriweather-Bold.ttf') format('truetype')
+    font-family: 'Merriweather'
+    font-weight: bold
+
+body
+    background-color: $background
+
+h1, h2, h3, h4, h5, h6 
+    font-family: 'Raleway'
+    color: white
+
+p, div 
+    font-family: 'Merriweather'
+    color: $light
+
+a
+    color: $primary-light
+
+    &:hover
+        color: $accent
+
+code
+    border: none
+    color: inherit
+    background-color: transparent
+
+.flex-container
+    display: flex
+    align-items: center
+
+.hero
+    width: 100vw
+    height: 100vh
+    overflow: hidden
+    padding-top: 30vh
+
+    .center-bar
+        width: 100vw
+        height: 40vh
+
+        #title
+            display: inline
+
+        img
+            height: 100%
+            box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19), 0 12px 15px 0 rgba(0, 0, 0, 0.24)
+
+nav.top-bar
+    background-color: $primary
+
+section.content
+    margin-top: 50px
+
+    .content-header
+        text-align: center
+
+        h1
+            font-weight: 200
+
+#portfolio 
+
+    ul.tabs
+        justify-content: center
+
+        li
+            margin: 0 5px
+
+        li a
+            font-family: 'Raleway'
+            color: $light
+            border-bottom: 2px solid $background-light
+            background-color: transparent
+
+            &:hover
+                color: $accent
+                border-bottom: 2px solid $accent 
+
+        li.active a
+            color: $accent
+            border-bottom: 2px solid $accent
+
+
+
+    .tabs-content .content
+        padding-bottom: 0px
+        border-bottom: 2px solid $background-light
+
+    .item
+        align-items: center
+
+        .description h3
+            font-weight: bold
+
+        .column
+            padding-top: 20px
+            padding-bottom: 20px
+
+        .column.tallest:before
+            content: ""
+            width: 30px
+            height: 30px
+            position: absolute
+            top: 0
+            background: $background
+            text-align: center
+            border: 3px solid $background-light
+            border-radius: 15px
+            z-index: 2
+
+        .column.tallest:first-child:before
+            right: -16px
+        
+        .column.tallest:nth-child(2):before
+            left: -16px
+
+        .column:first-child
+            padding-right: 49px
+            margin-right: -1px
+            border-right: 2px $background-light solid
+            text-align: right
+
+        .column:nth-child(2)
+            padding-left: 49px
+            margin-left: -1px
+            border-left: 2px $background-light solid
+            text-align: left
+
+        .column.thumbnail img
+            box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19), 0 12px 15px 0 rgba(0, 0, 0, 0.24)
+
+#workflow
+    img#vim
+        margin-bottom: 20px
+
+footer
+    width: 100vw
+    margin: 50px 0
+
+    .contact
+        position: relative
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+
+        a
+            color: $light
+
+            &:hover
+                color: $accent
+
+
+
+
+
+
+
+
+.depth0
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0.0)
+
+.depth1
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26)
+
+.depth2
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 8px 17px 0 rgba(0, 0, 0, 0.2)
+
+.depth3
+    box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19), 0 12px 15px 0 rgba(0, 0, 0, 0.24)
+
+.depth4
+    box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21), 0 16px 28px 0 rgba(0, 0, 0, 0.22)
+
+.depth5
+    box-shadow: 0 40px 77px 0 rgba(0, 0, 0, 0.22), 0 27px 24px 0 rgba(0, 0, 0, 0.2)
+
+
+
+
+
+
+
+
+
