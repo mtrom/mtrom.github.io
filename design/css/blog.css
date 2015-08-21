@@ -1,0 +1,80 @@
+.row {
+    margin-bottom: 20px;
+}
+.post {
+    overflow: hidden;
+}
+.post .title {
+    width: 18%;
+    display: none;
+    position: absolute;
+    padding: 8px 13px;
+    font-size: 20px;
+}
+.post:hover .title {
+    display: initial;
+    color: black;
+}
+.posts ul li:before {
+    content: "";
+}
+nav  {
+    height: 3em !important;
+    display: block;
+}
+nav form.horizontal {
+    float: left;
+    overflow: auto;
+}
+nav #navigation {
+    float: right;
+    overflow: auto;
+}
+nav > form.horizontal select, 
+nav > form.horizontal .search-bar,
+nav > form.horizontal .search-bar input {
+    vertical-align: bottom;
+    margin-bottom: 0;
+}
+#sign-in {
+    background-color: white;
+}
+#sign-in:hover {
+    color: black;
+    background-color: white;
+}
+#sign-in form {
+    display: block;
+    max-width:  0;
+    max-height: 0;
+    margin-top: 0;
+    opacity: 0;
+    -webkit-transition: max-height 1s, max-width 1s, margin-top 1s, opacity 1s;
+
+
+    overflow: hidden;
+}
+#sign-in:hover form {
+    /* larger than they would ever actually be */
+    max-width:  300px;
+    max-height: 225px;
+    margin-top: 1em;
+    opacity: 1;
+    -webkit-transition: max-height 1s, max-width 1s, margin-top 1s, opacity 1s;
+}
+#sign-in input[type=submit] {
+    width: 0%;
+    display: inline;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 12px;
+    -webkit-transition: width 0.5s linear 0.25s;
+}
+#sign-in:hover input[type=submit] {
+    width: 48%;
+    -webkit-transition: width 0.5s;
+}
+input:invalid ~ input[type=submit]#up:hover {
+    background-color: #1240ab;
+    cursor: pointer;
+}
